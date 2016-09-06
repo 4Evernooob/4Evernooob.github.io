@@ -84,6 +84,19 @@
     <div class="entry">
       
         <p>以下正文<br>test</p>
+<p>fdsafaffasfsafds</p>
+<p>function showNumberWithAnimation(i,j,randNumber){<br>    var numberCell = $(‘#number-cell-‘ +i+ ‘-‘ +j);</p>
+<pre><code>numberCell.css(&apos;background-color&apos;,getNumberBackgroundColor(randNumber));
+numberCell.css(&apos;color&apos;,getNumberColor(randNumber));
+numberCell.text(randNumber);
+
+numberCell.animate({
+    width:&quot;100px&quot;,
+    height:&quot;100px&quot;,
+    top:getPosTop(i,j),
+    left:getPosLeft(i,j)
+},250);
+</code></pre><p>}</p>
 
       
     </div>
