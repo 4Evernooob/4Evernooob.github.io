@@ -85,18 +85,7 @@
       
         <p>以下正文<br>test</p>
 <p>fdsafaffasfsafds</p>
-<p>function showNumberWithAnimation(i,j,randNumber){<br>    var numberCell = $(‘#number-cell-‘ +i+ ‘-‘ +j);</p>
-<pre><code>numberCell.css(&apos;background-color&apos;,getNumberBackgroundColor(randNumber));
-numberCell.css(&apos;color&apos;,getNumberColor(randNumber));
-numberCell.text(randNumber);
-
-numberCell.animate({
-    width:&quot;100px&quot;,
-    height:&quot;100px&quot;,
-    top:getPosTop(i,j),
-    left:getPosLeft(i,j)
-},250);
-</code></pre><p>}</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> showNumberWithAnimation(i,j,randNumber)&#123;</div><div class="line">	var numberCell = $(<span class="string">'#number-cell-'</span> +i+ <span class="string">'-'</span> +j);</div><div class="line"></div><div class="line">	numberCell.css(<span class="string">'background-color'</span>,getNumberBackgroundColor(randNumber));</div><div class="line">	numberCell.css(<span class="string">'color'</span>,getNumberColor(randNumber));</div><div class="line">	numberCell.text(randNumber);</div><div class="line"></div><div class="line">	numberCell.animate(&#123;</div><div class="line">		width:<span class="string">"100px"</span>,</div><div class="line">		height:<span class="string">"100px"</span>,</div><div class="line">		top:getPosTop(i,j),</div><div class="line">		left:getPosLeft(i,j)</div><div class="line">	&#125;,250);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
