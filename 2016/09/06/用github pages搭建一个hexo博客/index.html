@@ -87,9 +87,7 @@
 <meta name="description" content="用github pages搭建一个hexo博客
 相关的教程网上有很多了 ，我就写一下重点和一些需要注意的地方。
 
-前期准备注册github账号,创建名称为【你的github用户名.github.io】的repository。安装node.js和git环境
-
-安装hexo，打开git bash,输入npm install -g hexo```($不用输，下同)12345678910113.  在本地">
+前期准备注册github账号,创建名称为【你的github用户名.github.io】的repository。安装node.js和git环境">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用github pages搭建一个hexo博客">
 <meta property="og:url" content="http://shuhao.win/2016/09/06/用github pages搭建一个hexo博客/index.html">
@@ -97,18 +95,14 @@
 <meta property="og:description" content="用github pages搭建一个hexo博客
 相关的教程网上有很多了 ，我就写一下重点和一些需要注意的地方。
 
-前期准备注册github账号,创建名称为【你的github用户名.github.io】的repository。安装node.js和git环境
-
-安装hexo，打开git bash,输入npm install -g hexo```($不用输，下同)12345678910113.  在本地">
-<meta property="og:updated_time" content="2016-09-09T15:46:36.775Z">
+前期准备注册github账号,创建名称为【你的github用户名.github.io】的repository。安装node.js和git环境">
+<meta property="og:updated_time" content="2016-09-09T16:09:52.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用github pages搭建一个hexo博客">
 <meta name="twitter:description" content="用github pages搭建一个hexo博客
 相关的教程网上有很多了 ，我就写一下重点和一些需要注意的地方。
 
-前期准备注册github账号,创建名称为【你的github用户名.github.io】的repository。安装node.js和git环境
-
-安装hexo，打开git bash,输入npm install -g hexo```($不用输，下同)12345678910113.  在本地">
+前期准备注册github账号,创建名称为【你的github用户名.github.io】的repository。安装node.js和git环境">
 
 
 
@@ -340,27 +334,68 @@
         <h1 id="用github-pages搭建一个hexo博客"><a href="#用github-pages搭建一个hexo博客" class="headerlink" title="用github pages搭建一个hexo博客"></a>用github pages搭建一个hexo博客</h1><hr>
 <p>相关的教程网上有很多了 ，我就写一下重点和一些需要注意的地方。</p>
 <ol>
-<li><p>前期准备<br>注册github账号,创建名称为【你的github用户名.github.io】的repository。<br>安装node.js和git环境</p>
-</li>
-<li><p>安装hexo，打开git bash,输入<figure class="highlight plain"><figcaption><span>npm install -g hexo```($不用输，下同)</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">3.  在本地电脑上新建一个文件夹，命名为hexo(或者其他）。</div><div class="line">点击右键打开git bash（win10可能会闪退）,或者直接在git bash里手动进入刚才新建的文件夹目录，例如`$ cd f:/hexo`</div><div class="line">输入`$ hexo init`</div><div class="line">安装依赖包`$ npm install`</div><div class="line">本地访问你的hexo博客`$ hexo s -g`在浏览器中输入localhost：4000查看。</div><div class="line"></div><div class="line">4. 配置SSH keys</div><div class="line">  * 生成新的SSH Key：</div><div class="line">输入：`$ ssh-keygen -t rsa -C &quot;邮件地址@youremail.com`</div><div class="line">显示：</div></pre></td></tr></table></figure></p>
+<li>前期准备<br>注册github账号,创建名称为【你的github用户名.github.io】的repository。<br>安装node.js和git环境<a id="more"></a>
+安装hexo，打开git bash,输入<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> -g hexo</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>“Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">然后系统会要你输入密码：</div></pre></td></tr></table></figure></p>
-<p>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;<br>Enter same passphrase again:&lt;再次输入加密串&gt;<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">  * 成功生成ssh <span class="built_in">key</span>后，添加SSH <span class="built_in">Key</span>到GitHub</div><div class="line">找到id_rsa这个文件打开后复制文件内容，登录github网站，点击右上角你的头像--settings--SSH <span class="keyword">and</span> GPG keys--<span class="keyword">new</span> ssh <span class="built_in">key</span></div><div class="line"><span class="built_in">title</span>这一栏随意命名，<span class="built_in">key</span>这栏把刚才的id_rsa文件内容复制进去就OK了</div><div class="line">在git bash里输入`$ ssh -T git<span class="comment">@github.com`</span></div><div class="line">然后根据提示输入yes,之后就会看到</div></pre></td></tr></table></figure></p>
-<p>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">* </span>最后设置你的github用户信息</div></pre></td></tr></table></figure></p>
-<p>$ git config –global user.name “xxx”//用户名<br>$ git config –global user.email “xxx@mail.com”//填写自己的邮箱<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">5. </span>接下来重点说一下主题的配置以及把本地项目上传到github中</div><div class="line">  * 本人在hexo众多的主题中选择了NexT这款主题。看中了他详细的说明文档，以及具备了一个静态博客网站所需求的各类功能。在[<span class="string">NexT官网</span>](<span class="link">http://theme-next.iissnan.com/</span>)中可以得到关于这款主题的详细介绍。</div><div class="line">  * 在终端窗口下，定位到 Hexo 站点目录下。输入：</div></pre></td></tr></table></figure></p>
-<p>$ hexo clean<br>$ git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">* </span>打开hexo本地文件夹根目录下的<span class="emphasis">_config.yml文件，修改或增加以下内容：</span></div></pre></td></tr></table></figure></p>
-<p>theme: next<br>#<br>deploy:<br>  type: git<br>  repository: <a href="https://github.com/你的github用户名/你的github用户名.github.io.git" target="_blank" rel="external">https://github.com/你的github用户名/你的github用户名.github.io.git</a><br>  branch: master<br>#<br>language: zh-Hans<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">  * 在git bash上输入`hexo s -g`,现在本地预览以下是否成功应用该主题。</div><div class="line">成功应用后，ctrl+c关闭本地服务，输入`hexo d -g`,就能在</div></pre></td></tr></table></figure></p>
-<p><a href="https://github.com/你的github用户名/你的github用户名.github.io```上面访问你的博客了。" target="_blank" rel="external">https://github.com/你的github用户名/你的github用户名.github.io```上面访问你的博客了。</a></p>
+<p>($不用输，下同)</p>
+<ol>
+<li>在本地电脑上新建一个文件夹，命名为hexo(或者其他）。<br>点击右键打开git bash（win10可能会闪退）,或者直接在git bash里手动进入刚才新建的文件夹目录，例如<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> f:/hexo</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>输入<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>hexo init</div></pre></td></tr></table></figure></p>
+<p>安装依赖包<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span></div></pre></td></tr></table></figure></p>
+<p>本地访问你的hexo博客<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>hexo s -g</div></pre></td></tr></table></figure></p>
+<p>在浏览器中输入localhost：4000查看。</p>
+<ol>
+<li>配置SSH keys</li>
+</ol>
 <ul>
-<li>有关NexT主题的其他详细设置，都可以在官网找到答案。<ol>
+<li>生成新的SSH Key：<br>输入：<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh-keygen</span> <span class="selector-tag">-t</span> <span class="selector-tag">rsa</span> <span class="selector-tag">-C</span> "邮件地址@<span class="keyword">youremail</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>显示：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">"Generating public/private rsa key pair.</div><div class="line">Enter <span class="keyword">file</span> <span class="keyword">in</span> <span class="keyword">which</span> to <span class="keyword">save</span> the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</div></pre></td></tr></table></figure></p>
+<p>然后系统会要你输入密码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):<span class="xml"><span class="tag">&lt;<span class="name">输入加密串</span>&gt;</span></span></div><div class="line">Enter same passphrase again:<span class="tag">&lt;<span class="name">再次输入加密串</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<ul>
+<li>成功生成ssh key后，添加SSH Key到GitHub<br>找到id_rsa这个文件打开后复制文件内容，登录github网站，点击右上角你的头像–settings–SSH and GPG keys–new ssh key<br>title这一栏随意命名，key这栏把刚才的id_rsa文件内容复制进去就OK了<br>在git bash里输入<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ssh -T git@github.com</div><div class="line"><span class="string">``</span><span class="string">`language</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后根据提示输入yes,之后就会看到<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi xxx! You<span class="symbol">'ve</span> successfully authenticated, but GitHub does <span class="keyword">not</span> provide shell <span class="keyword">access</span>.</div></pre></td></tr></table></figure></p>
+<ul>
+<li>最后设置你的github用户信息<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user<span class="selector-class">.name</span> <span class="string">"xxx"</span><span class="comment">//用户名</span></div><div class="line">$ git config --global user<span class="selector-class">.email</span> <span class="string">"xxx@mail.com"</span><span class="comment">//填写自己的邮箱</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>接下来重点说一下主题的配置以及把本地项目上传到github中。</li>
+</ol>
+<p>本人在hexo众多的主题中选择了NexT这款主题。看中了他详细的说明文档，以及具备了一个静态博客网站所需求的各类功能。在<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT官网</a>中可以得到关于这款主题的详细介绍。</p>
+<ul>
+<li><p>在终端窗口下，定位到 Hexo 站点目录下。输入：</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>hexo clean</div><div class="line"><span class="variable">$ </span>git clone <span class="symbol">https:</span>/<span class="regexp">/github.com/iissnan</span><span class="regexp">/hexo-theme-next themes/next</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>打开hexo本地文件夹根目录下的_config.yml文件，修改或增加以下内容：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">theme:</span> next</div><div class="line"><span class="meta">#</span></div><div class="line"><span class="symbol">deploy:</span></div><div class="line"><span class="symbol">  type:</span> git</div><div class="line"><span class="symbol">  repository:</span> https:<span class="comment">//github.com/你的github用户名/你的github用户名.github.io.git</span></div><div class="line"><span class="symbol">  branch:</span> master</div><div class="line"><span class="meta">#</span></div><div class="line"><span class="symbol">language:</span> zh-Hans</div></pre></td></tr></table></figure>
+</li>
+<li><p>在git bash上输入</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo s -g</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>现在本地预览以下是否成功应用该主题。<br>成功应用后，ctrl+c关闭本地服务，输入<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo d -g</span></div></pre></td></tr></table></figure></p>
+<p>就能在<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https:<span class="regexp">//gi</span>thub.com<span class="regexp">/你的github用户名/</span>你的github用户名.github.io</div></pre></td></tr></table></figure></p>
+<p>上面访问你的博客了。</p>
+<ul>
+<li>有关NexT主题的其他详细设置，都可以在官网找到答案。</li>
+</ul>
+<ol>
 <li>绑定独立域名</li>
 </ol>
-</li>
+<ul>
 <li>首先你要去购买一个域名，比如在万网上拍下一个域名后，进入阿里云的控制台–左侧侧菜单栏点击域名–找到你的域名在屏幕靠右侧点击”解析”。<br>添加一条解析，记录类型为CNAME，主机记录为@，记录值为“你的github用户名.github.io”，保存。</li>
 <li>在 本地hexo文件夹\source 目录下新建一个txt文档，内容输入你的独立域名（不需要加http或者www），然后重命名该txt为CNAME（不要文件后缀名）。</li>
-<li>在git bash中输入<code>hexo d -g</code>更新项目后,就成功绑定了你的独立域名。</li>
+<li>在git bash中输入<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo d -g</span></div></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>更新项目后,就成功绑定了你的独立域名。</p>
 
       
     </div>
