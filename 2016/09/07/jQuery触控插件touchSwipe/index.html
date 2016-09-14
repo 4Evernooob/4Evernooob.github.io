@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="testing," />
+  <meta name="keywords" content="jQuery,touchSwipe," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="description" content="编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。
+插件touchSwipe可监听单个和多个手指触摸,鼠标按着左键拖动等事件，因此插件可以实现滑动滚屏、缩放等效果。该插件依赖于jQuery。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://shuhao.win/2016/09/01/hello-world/index.html">
+<meta property="og:title" content="jQuery触控插件touchSwipe">
+<meta property="og:url" content="http://shuhao.win/2016/09/07/jQuery触控插件touchSwipe/index.html">
 <meta property="og:site_name" content="ShuHao's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta property="og:updated_time" content="2016-09-14T04:40:44.172Z">
+<meta property="og:description" content="编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。
+插件touchSwipe可监听单个和多个手指触摸,鼠标按着左键拖动等事件，因此插件可以实现滑动滚屏、缩放等效果。该插件依赖于jQuery。">
+<meta property="og:updated_time" content="2016-09-14T06:29:08.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="jQuery触控插件touchSwipe">
+<meta name="twitter:description" content="编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。
+插件touchSwipe可监听单个和多个手指触摸,鼠标按着左键拖动等事件，因此插件可以实现滑动滚屏、缩放等效果。该插件依赖于jQuery。">
 
 
 
@@ -114,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://shuhao.win/2016/09/01/hello-world/"/>
+  <link rel="canonical" href="http://shuhao.win/2016/09/07/jQuery触控插件touchSwipe/"/>
 
-  <title> Hello World | ShuHao's Blog </title>
+  <title> jQuery触控插件touchSwipe | ShuHao's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -256,7 +259,7 @@
             
             
               
-                Hello World
+                jQuery触控插件touchSwipe
               
             
           </h1>
@@ -268,8 +271,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-01T00:00:00+08:00" content="2016-09-01">
-              2016-09-01
+            <time itemprop="dateCreated" datetime="2016-09-07T00:00:00+08:00" content="2016-09-07">
+              2016-09-07
             </time>
           </span>
 
@@ -282,8 +285,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/example/" itemprop="url" rel="index">
-                    <span itemprop="name">example</span>
+                  <a href="/categories/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
                   </a>
                 </span>
 
@@ -298,8 +301,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/01/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/01/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/09/07/jQuery触控插件touchSwipe/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/07/jQuery触控插件touchSwipe/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -322,16 +325,24 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<a id="more"></a>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。</p>
+<p>插件touchSwipe可监听单个和多个手指触摸,鼠标按着左键拖动等事件，因此插件可以实现滑动滚屏、缩放等效果。<br>该插件依赖于jQuery。<br><a id="more"></a></p>
+<p>####特点：</p>
+<ol>
+<li>监听滑动的4个方向：上、下、左、右；</li>
+<li>监听多个手指收缩还是外张；</li>
+<li>支持单手指或双手指触摸事件；</li>
+<li>支持单击事件touchSwipe对象和它的子对象；</li>
+<li>可定义临界值和最大时间来判断手势的实际滑动；</li>
+<li>滑动事件有4个触发点：“开始”,“移动”,“结束”和“取消”；</li>
+<li>结束事件可以在手提释放或是快速达到临界值时触发；</li>
+<li>允许手指刷和页面滚屏；</li>
+<li>可禁用户通过输入元素（如：按钮、表单、文本框等）触发事件；</li>
+</ol>
+<p>####设定触摸方向为上下左右时的代码示例如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/*引入插件*/</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"jquery.touchSwipe.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*触摸操作函数*/</span></div><div class="line"></div><div class="line">	$(<span class="built_in">document</span>).swipe(&#123;</div><div class="line">	swipe:<span class="function"><span class="keyword">function</span>(<span class="params">event, direction, distance, duration, fingerCount</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"left"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"up"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"right"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"down"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
+<p>更多使用方法可以参考官方文档。</p>
 
       
     </div>
@@ -354,7 +365,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/testing/" rel="tag">#testing</a>
+            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
+          
+            <a href="/tags/touchSwipe/" rel="tag">#touchSwipe</a>
           
         </div>
       
@@ -363,13 +376,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/06/用github pages搭建一个hexo博客/" rel="next" title="用github pages搭建一个hexo博客">
+                <i class="fa fa-chevron-left"></i> 用github pages搭建一个hexo博客
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/03/发布文章的方法/" rel="prev" title="发布文章的方法">
-                发布文章的方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -395,8 +408,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/01/hello-world/"
-           data-title="Hello World" data-url="http://shuhao.win/2016/09/01/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/09/07/jQuery触控插件touchSwipe/"
+           data-title="jQuery触控插件touchSwipe" data-url="http://shuhao.win/2016/09/07/jQuery触控插件touchSwipe/">
       </div>
     
   </div>
@@ -505,7 +518,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
