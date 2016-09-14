@@ -96,7 +96,7 @@
 
 插件touchSwipe可监听单个和多个手指触摸,鼠标按着左键拖动等事件，因此插件可以实现滑动滚屏、缩放等效果。
 该插件依赖于jQuery。">
-<meta property="og:updated_time" content="2016-09-14T06:33:14.936Z">
+<meta property="og:updated_time" content="2016-09-14T06:34:27.033Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery触控插件touchSwipe">
 <meta name="twitter:description" content="编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。
@@ -331,13 +331,13 @@
       
 
       
-        <p>   编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。</p>
+        <p>编程过程中需要实现触摸操作的上下左右四个方向，分别绑定相应的函数，我在网上搜索后发现这款touchSwipe的jQuery插件能够满足我的要求，简单学习了一下它的使用方法。</p>
 <ul>
 <li>插件touchSwipe可监听单个和多个手指触摸,鼠标按着左键拖动等事件，因此插件可以实现滑动滚屏、缩放等效果。</li>
 <li>该插件依赖于jQuery。<a id="more"></a>
 </li>
 </ul>
-<p>####特点：</p>
+<p>###特点：</p>
 <ol>
 <li>监听滑动的4个方向：上、下、左、右；</li>
 <li>监听多个手指收缩还是外张；</li>
@@ -349,7 +349,7 @@
 <li>允许手指刷和页面滚屏；</li>
 <li>可禁用户通过输入元素（如：按钮、表单、文本框等）触发事件；</li>
 </ol>
-<p>####设定触摸方向为上下左右时的代码示例如下：</p>
+<p>###设定触摸方向为上下左右时的代码示例如下：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/*引入插件*/</div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"jquery.touchSwipe.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*触摸操作函数*/</span></div><div class="line"></div><div class="line">	$(<span class="built_in">document</span>).swipe(&#123;</div><div class="line">	swipe:<span class="function"><span class="keyword">function</span>(<span class="params">event, direction, distance, duration, fingerCount</span>) </span>&#123;</div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"left"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"up"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"right"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">if</span>(direction == <span class="string">"down"</span>)&#123;</div><div class="line">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">            &#125;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div></pre></td></tr></table></figure>
 <p>更多使用方法可以参考官方文档。</p>
