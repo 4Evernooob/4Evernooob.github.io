@@ -94,12 +94,14 @@
 <meta property="og:description" content="转载至http://www.cnblogs.com/KeenLeung/p/3799895.html 
 
 12345678910111213141516171819/*----html-----*/&amp;lt;form&amp;gt;    你爱好的运动是？&amp;lt;input type=&quot;checkbox&quot; id=&quot;CheckedAll&quot; /&amp;gt;全选/全不选&amp;lt;br/&amp;gt;    &amp;lt;inpu">
-<meta property="og:updated_time" content="2016-10-05T08:45:20.700Z">
+<meta property="og:image" content="http://dl.iteye.com/upload/attachment/482401/bf5b6182-ffc7-3e30-a159-75ac8980fd1f.jpg?_=3799895">
+<meta property="og:updated_time" content="2016-10-05T08:49:48.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery checkbox勾选相关的问题">
 <meta name="twitter:description" content="转载至http://www.cnblogs.com/KeenLeung/p/3799895.html 
 
 12345678910111213141516171819/*----html-----*/&amp;lt;form&amp;gt;    你爱好的运动是？&amp;lt;input type=&quot;checkbox&quot; id=&quot;CheckedAll&quot; /&amp;gt;全选/全不选&amp;lt;br/&amp;gt;    &amp;lt;inpu">
+<meta name="twitter:image" content="http://dl.iteye.com/upload/attachment/482401/bf5b6182-ffc7-3e30-a159-75ac8980fd1f.jpg?_=3799895">
 
 
 
@@ -376,13 +378,14 @@
 <p>然而，曾经jQuery1.6被释放出来的时候，jQuery团队明白当浏览器仅关心页面加载时，设置一些值不是特别的有用。所以，为了保持向后兼容性和.attr()方法的有用性，我们可以继续在jQuery1.6.1中使用.attr()方法取得和设置这些boolean attributes。 </p>
 <p>最普通的attributes是checked,selected,disabled和readOnly，但下面是jQuery1.6.1支持的使用.attr()动态地取得和设置boolean attributes/properties的完整列表：</p>
 <ol>
-<li>autofocus, autoplay, async, checked, controls, defer, disabled,  </li>
-<li>hidden, loop, multiple, open, readonly, required, scoped, selected  </li>
+<li><code>autofocus, autoplay, async, checked, controls, defer, disabled,</code></li>
+<li><code>hidden, loop, multiple, open, readonly, required, scoped, selected</code></li>
 </ol>
 <p>（译者注：大部分都是html5新增的属性）</p>
 <p>还是建议使用.prop()方法来设置这些boolean attributes/properties，即使这些用例没有转换成使用.prop()方法，但是你的代码仍然可以在jQuery1.6.1中正常运行。</p>
 <p>下面是一些attributes和properties的列表，正常情况下，应该使用其对应的方法(见下面的列表)来取得和设置它们。下面的是首用法，但是.attr()方法可以运行在所有的attributes情况下。</p>
 <p>注意：一些DOM元素的properties也被列在下面，但是仅运行在新的.prop()方法中</p>
+<p><img src="http://dl.iteye.com/upload/attachment/482401/bf5b6182-ffc7-3e30-a159-75ac8980fd1f.jpg?_=3799895" alt=""></p>
 <p>*例如: <code>window.location</code></p>
 <p><em>例如: <code>window.location</code><br>*</em>如果需要在(if needed over) <code>.width()</code></p>
 <p>.attr()和.prop()都不应该被用来取值/设值。使用.val()方法代替(即使使用.attr(“value”,”somevalue”) 可以继续运行，就像1.6之前做的那样)</p>
