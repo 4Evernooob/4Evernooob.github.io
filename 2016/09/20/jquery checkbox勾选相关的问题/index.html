@@ -1,0 +1,726 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="jquery,checkbo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="转载至http://www.cnblogs.com/KeenLeung/p/3799895.html 
+
+12345678910111213141516171819/*----html-----*/&amp;lt;form&amp;gt;    你爱好的运动是？&amp;lt;input type=&quot;checkbox&quot; id=&quot;CheckedAll&quot; /&amp;gt;全选/全不选&amp;lt;br/&amp;gt;    &amp;lt;inpu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery checkbox勾选相关的问题">
+<meta property="og:url" content="http://shuhao.win/2016/09/20/jquery checkbox勾选相关的问题/index.html">
+<meta property="og:site_name" content="ShuHao's Blog">
+<meta property="og:description" content="转载至http://www.cnblogs.com/KeenLeung/p/3799895.html 
+
+12345678910111213141516171819/*----html-----*/&amp;lt;form&amp;gt;    你爱好的运动是？&amp;lt;input type=&quot;checkbox&quot; id=&quot;CheckedAll&quot; /&amp;gt;全选/全不选&amp;lt;br/&amp;gt;    &amp;lt;inpu">
+<meta property="og:updated_time" content="2016-10-05T08:45:20.700Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery checkbox勾选相关的问题">
+<meta name="twitter:description" content="转载至http://www.cnblogs.com/KeenLeung/p/3799895.html 
+
+12345678910111213141516171819/*----html-----*/&amp;lt;form&amp;gt;    你爱好的运动是？&amp;lt;input type=&quot;checkbox&quot; id=&quot;CheckedAll&quot; /&amp;gt;全选/全不选&amp;lt;br/&amp;gt;    &amp;lt;inpu">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://shuhao.win/2016/09/20/jquery checkbox勾选相关的问题/"/>
+
+  <title> jQuery checkbox勾选相关的问题 | ShuHao's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">ShuHao's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Ready to roll out!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jQuery checkbox勾选相关的问题
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-20T00:00:00+08:00" content="2016-09-20">
+              2016-09-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/jquery/" itemprop="url" rel="index">
+                    <span itemprop="name">jquery</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/20/jquery checkbox勾选相关的问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/jquery checkbox勾选相关的问题/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>转载至<a href="http://www.cnblogs.com/KeenLeung/p/3799895.html" target="_blank" rel="external">http://www.cnblogs.com/KeenLeung/p/3799895.html</a> </p>
+</blockquote>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*----html-----*/</span></div><div class="line">&lt;<span class="keyword">form</span>&gt;</div><div class="line">    你爱好的运动是？&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"CheckedAll"</span> /&gt;全选/全不选&lt;<span class="keyword">br</span>/&gt;</div><div class="line">    &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span> name=<span class="string">"items"</span> value=<span class="string">"足球"</span> /&gt;足球</div><div class="line">    &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span> name=<span class="string">"items"</span> value=<span class="string">"篮球"</span> /&gt;篮球</div><div class="line">    &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span> name=<span class="string">"items"</span> value=<span class="string">"羽毛球"</span> /&gt;羽毛球</div><div class="line">    &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"checkbox"</span> name=<span class="string">"items"</span> value=<span class="string">"乒乓球"</span> /&gt;乒乓球</div><div class="line">    &lt;<span class="keyword">br</span> /&gt;</div><div class="line">    &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"button"</span> id=<span class="string">"send"</span> value=<span class="string">"提 交"</span> /&gt;</div><div class="line">&lt;/<span class="keyword">form</span>&gt;</div><div class="line"> </div><div class="line"><span class="comment">/*-----javascript------*/</span></div><div class="line">  $(<span class="string">"#CheckedAll"</span>).click(function () &#123;</div><div class="line">                <span class="keyword">if</span> ($(this).is(<span class="string">":checked"</span>)) &#123;</div><div class="line">                    $(<span class="string">"[name=items]:checkbox"</span>).attr(<span class="string">"checked"</span>, true);</div><div class="line">                &#125; <span class="keyword">else</span> &#123;</div><div class="line">                    $(<span class="string">"[name=items]:checkbox"</span>).attr(<span class="string">"checked"</span>, false);</div><div class="line">                &#125;</div><div class="line">            &#125;);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>第一次执行，没问题，但第二次执行就有问题了，选择不了</p>
+<p>解决办法：把attr()换成prop()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#CheckedAll"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">               <span class="keyword">if</span> ($(<span class="keyword">this</span>).is(<span class="string">":checked"</span>)) &#123;</div><div class="line">                   $(<span class="string">"[name=items]:checkbox"</span>).prop(<span class="string">"checked"</span>, <span class="literal">true</span>);</div><div class="line">               &#125; <span class="keyword">else</span> &#123;</div><div class="line">                   $(<span class="string">"[name=items]:checkbox"</span>).prop(<span class="string">"checked"</span>, <span class="literal">false</span>);</div><div class="line">               &#125;</div><div class="line">           &#125;);</div></pre></td></tr></table></figure>
+<h3 id="prop-和attr-区别："><a href="#prop-和attr-区别：" class="headerlink" title="prop()和attr()区别："></a>prop()和attr()区别：</h3><p>（来源：<a href="http://hxq0506.iteye.com/blog/1046334" target="_blank" rel="external">http://hxq0506.iteye.com/blog/1046334</a>）</p>
+<p>最近在iteye的新闻中看到jQuery已经更新到了1.6.1。和之前版本的最大变化是增加了.prop方法。但是.prop()方法和.attr()方法，单从字面上很难区分。在汉语中properties和attributes都有表示“属性”的意思。</p>
+<p>最近在iteye的新闻中看到jQuery已经更新到了1.6.1。和之前版本的最大变化是增加了.prop方法。但是.prop()方法和.attr()方法，单从字面上很难区分。在汉语中properties和attributes都有表示“属性”的意思。<br>下面根据这篇博文（<a href="http://blog.jquery.com/2011/05/12/jquery-1-6-1-released/" target="_blank" rel="external">javascript:mctmp(0);</a>），简要翻译了.prop()和.attr()的用法：</p>
+<p><strong>1、从1.5.2升级到1.6.1</strong></p>
+<p>通过介绍新方法.prop()以及.attr()方法的改变，jQuery1.6.1引起了一场关于attributes和properties之间有何区别和联系的激烈讨论。同时，1.6.1也解决了一些向后兼容性问题。当从1.5.2升级到1.6.1时，你不必修改任何attribute代码。</p>
+<p>下面是关于jQuery1.6和1.6.1中Attributes模块变化的描述，以及.attr()方法和.prop()方法的首选使用。然而，正如前面所述，jQuery1.6.1允许你使用.attr()方法就像以前它被使用在所有的情况中一样。</p>
+<p><strong>2、发生了什么变化</strong></p>
+<p>Attributes模块的变化是移除了attributes和properties之间模棱两可的东西，但是在jQuery社区中引起了一些混乱，因为在1.6之前的所有版本中都使用一个方法(.attr())来处理attributes和properties。但是老的.attr()方法有一些bug，很难维护。jQuery1.6.1对Attributes模块进行了更新，并且修复了几个bug。</p>
+<p>特别提到的是，boolean attributes，比如：checked,selected,readonly和disabled在1.6.1中和1.6之前的处理相同。这意味着下面的代码：</p>
+<ol>
+<li><code>$(“:checkbox”).attr(“checked”, true);</code></li>
+<li><code>$(“option”).attr(“selected”, true);</code></li>
+<li><code>$(“input”).attr(“readonly”, true);</code></li>
+<li><code>$(“input”).attr(“disabled”, true);</code> </li>
+</ol>
+<p> 甚至是这样的代码：</p>
+<ol>
+<li><code>if ( $(“:checkbox”).attr(“checked”) ) { /* Do something */ }</code>  </li>
+</ol>
+<p>在1.6.1中没有必要为了保持之前期望的运行结果而发生任何改变。</p>
+<p>为了让jQuery1.6中的.attr()方法的变化被理解的清楚些，下面是一些使用.attr()的例子，虽然在jQuery之前的版本中能正常工作，但是现在必须使用.prop（）方法代替：</p>
+<p>首先，window或document中使用.attr()方法在jQuery1.6中不能正常运行，因为window和document中不能有attributes。它们包含properties(比如：location或readyState)，必须使用.prop()方法操作或简单地使用javascript原生的方法。在jQuery1.6.1中，window和document中使用.attr()将被自动转成使用.prop，而不是抛出一个错误。</p>
+<p>其次，checked,selected和前面提到的其它boolean attributes，因为这些attributes和其相应的properties之间的特殊关系而被特殊对待。基本上，一个attribute就是以下html中你看到的：</p>
+<ol>
+<li><code>&lt;input type=”checkbox” checked=”checked”&gt;</code>  </li>
+</ol>
+<p>boolean attributes，比如：checked，仅被设置成默认值或初始值。在一个checkbox的元素中，checked attributes在页面加载的时候就被设置，而不管checkbox元素是否被选中。</p>
+<p>properties就是浏览器用来记录当前值的东西。正常情况下，properties反映它们相应的attributes(如果存在的话)。但这并不是boolean attriubutes的情况。当用户点击一个checkbox元素或选中一个select元素的一个option时，boolean properties保持最新。但相应的boolean attributes是不一样的，正如上面所述，它们仅被浏览器用来保存初始值。</p>
+<ol>
+<li><code>$(“:checkbox”).get(0).checked = true;</code> </li>
+<li><code>// Is the same as $(&quot;:checkbox:first&quot;).prop(“checked”, true);</code>  </li>
+</ol>
+<p>在jQuery1.6中，如果使用下面的方法设置checked：</p>
+<ol>
+<li><code>$(“:checkbox”).attr(“checked”, true);</code>  </li>
+</ol>
+<p>将不会检查checkbox元素，因为它是需要被设置的property，但是你所有的设置都是初始值。</p>
+<p>然而，曾经jQuery1.6被释放出来的时候，jQuery团队明白当浏览器仅关心页面加载时，设置一些值不是特别的有用。所以，为了保持向后兼容性和.attr()方法的有用性，我们可以继续在jQuery1.6.1中使用.attr()方法取得和设置这些boolean attributes。 </p>
+<p>最普通的attributes是checked,selected,disabled和readOnly，但下面是jQuery1.6.1支持的使用.attr()动态地取得和设置boolean attributes/properties的完整列表：</p>
+<ol>
+<li>autofocus, autoplay, async, checked, controls, defer, disabled,  </li>
+<li>hidden, loop, multiple, open, readonly, required, scoped, selected  </li>
+</ol>
+<p>（译者注：大部分都是html5新增的属性）</p>
+<p>还是建议使用.prop()方法来设置这些boolean attributes/properties，即使这些用例没有转换成使用.prop()方法，但是你的代码仍然可以在jQuery1.6.1中正常运行。</p>
+<p>下面是一些attributes和properties的列表，正常情况下，应该使用其对应的方法(见下面的列表)来取得和设置它们。下面的是首用法，但是.attr()方法可以运行在所有的attributes情况下。</p>
+<p>注意：一些DOM元素的properties也被列在下面，但是仅运行在新的.prop()方法中</p>
+<p>*例如: <code>window.location</code></p>
+<p><em>例如: <code>window.location</code><br>*</em>如果需要在(if needed over) <code>.width()</code></p>
+<p>.attr()和.prop()都不应该被用来取值/设值。使用.val()方法代替(即使使用.attr(“value”,”somevalue”) 可以继续运行，就像1.6之前做的那样)</p>
+<p><strong>3、首选用法的概述</strong></p>
+<p>.prop()方法应该被用来处理boolean attributes/properties以及在html(比如：window.location)中不存在的properties。其他所有的attributes(在html中你看到的那些)可以而且应该继续使用.attr()方法来进行操作。</p>
+<p>上面的概述已经描述的够清楚了，我也没有必要再总结了。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jquery/" rel="tag">#jquery</a>
+          
+            <a href="/tags/checkbo/" rel="tag">#checkbo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/11/owl-carousel插件使用小结/" rel="next" title="owl-carousel 幻灯片插件">
+                <i class="fa fa-chevron-left"></i> owl-carousel 幻灯片插件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/20/jquery checkbox勾选相关的问题/"
+           data-title="jQuery checkbox勾选相关的问题" data-url="http://shuhao.win/2016/09/20/jquery checkbox勾选相关的问题/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://odbk2ygqn.bkt.clouddn.com/avatar.png"
+               alt="Shu Hao" />
+          <p class="site-author-name" itemprop="name">Shu Hao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="NexT使用文档" target="_blank">NexT使用文档</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#prop-和attr-区别："><span class="nav-number">1.</span> <span class="nav-text">prop()和attr()区别：</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shu Hao</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"genokiller"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
